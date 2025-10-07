@@ -1,0 +1,244 @@
+/* Custom Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  opacity: 0.1;
+}
+
+/* Form Enhancements */
+.form-control, .form-select {
+  border: 2px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.15);
+  transform: translateY(-1px);
+}
+
+.form-label {
+  color: #495057;
+  margin-bottom: 0.75rem;
+}
+
+.form-label i {
+  width: 20px;
+}
+
+/* Card Enhancements */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+.card-header {
+  border-bottom: 3px solid #007bff;
+}
+
+/* Button Enhancements */
+.btn-primary {
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #0056b3 0%, #004085 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
+}
+
+/* Textarea Enhancements */
+textarea.form-control {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Gemini Response Styling */
+.response-container {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.gemini-response {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 0;
+  padding: 2rem;
+}
+
+.response-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.response-section {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  border-left: 5px solid #007bff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.response-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(45deg, transparent 30%, rgba(0, 123, 255, 0.05) 100%);
+  border-radius: 50%;
+  transform: translate(30px, -30px);
+}
+
+.response-section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.section-title {
+  color: #007bff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #e9ecef;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: #007bff;
+}
+
+.section-content {
+  line-height: 1.7;
+  position: relative;
+  z-index: 1;
+}
+
+.section-content p {
+  margin-bottom: 1rem;
+  color: #444;
+  font-size: 1.05rem;
+}
+
+.bullet-point {
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  color: #555;
+  position: relative;
+  font-size: 1.05rem;
+}
+
+.bullet-point::before {
+  content: '▶';
+  position: absolute;
+  left: 0;
+  color: #007bff;
+  font-size: 0.8rem;
+}
+
+.sub-header {
+  color: #495057;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 1.5rem 0 1rem 0;
+  padding-left: 1rem;
+  border-left: 3px solid #007bff;
+  background: rgba(0, 123, 255, 0.05);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.section-content strong {
+  color: #007bff;
+  font-weight: 600;
+}
+
+/* Loading Animation */
+.btn-primary:disabled {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary:disabled::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 3rem 0 !important;
+  }
+  
+  .display-4 {
+    font-size: 2rem !important;
+  }
+  
+  .gemini-response {
+    padding: 1rem;
+  }
+  
+  .response-section {
+    padding: 1.5rem;
+  }
+  
+  .section-title {
+    font-size: 1.2rem;
+  }
+  
+  .card-body {
+    padding: 1.5rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  .col-lg-8 {
+    padding: 0;
+  }
+  
+  .response-section {
+    padding: 1rem;
+  }
+}
