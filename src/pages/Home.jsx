@@ -140,7 +140,7 @@ Ensure the response is structured, clear, and easy to display in a React app.
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
-                'X-goog-api-key': 'AIzaSyBpHyuniXqyyJ2yfGDdMtcP1KNIFDiHk5g'
+                'X-goog-api-key': import.meta.env.VITE_GEMINI_API_KEY
             },
             body: `{"contents":[{"parts":[{"text":"${prompt}"}]}]}`
         };
